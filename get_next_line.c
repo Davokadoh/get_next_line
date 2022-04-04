@@ -6,11 +6,11 @@
 /*   By: jleroux <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/04 14:48:52 by jleroux           #+#    #+#             */
-/*   Updated: 2022/04/04 14:50:53 by jleroux          ###   ########.fr       */
+/*   Updated: 2022/04/04 15:02:48 by jleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line_bonus.h"
+#include "get_next_line.h"
 
 ssize_t	read_file(int fd, char **buff_read, char **line);
 char	*get_line(char **buff_read, char **line);
