@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jleroux <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/04 14:48:52 by jleroux           #+#    #+#             */
-/*   Updated: 2022/04/04 15:02:48 by jleroux          ###   ########.fr       */
+/*   Created: 2022/04/04 15:22:18 by jleroux           #+#    #+#             */
+/*   Updated: 2022/04/04 15:22:22 by jleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-ssize_t	read_file(int fd, char **buff_read, char **line);
+int		read_file(int fd, char **buff_read, char **line);
 char	*get_line(char **buff_read, char **line);
 
 char	*get_next_line(int fd)
@@ -20,7 +20,7 @@ char	*get_next_line(int fd)
 	static char		*buff_read[257];
 	char			buffer[BUFFER_SIZE + 1];
 	char			*line;
-	ssize_t			read_bytes;
+	int				read_bytes;
 
 	if (fd < 0 || fd > 256)
 		return (NULL);
@@ -34,7 +34,7 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-ssize_t	read_file(int fd, char **buff_read, char **line)
+int	read_file(int fd, char **buff_read, char **line)
 {
 	char	*temp;
 	ssize_t	read_bytes;

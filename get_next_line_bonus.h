@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cado-car <cado-car@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: jleroux <marvin@42lausanne.ch>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/08/10 18:50:22 by cado-car          #+#    #+#             */
-/*   Updated: 2022/04/04 14:54:47 by jleroux          ###   ########.fr       */
+/*   Created: 2022/04/04 15:22:40 by jleroux           #+#    #+#             */
+/*   Updated: 2022/04/04 15:28:46 by jleroux          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <limits.h>
 
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 1000
@@ -23,11 +22,14 @@
 
 char	*get_next_line(int fd);
 
-// utils
 char	*ft_strchr(const char *s, int c);
+
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
+
 char	*ft_strjoin(char const *s1, char const *s2);
+
 char	*ft_strdup(const char *s1);
+
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
