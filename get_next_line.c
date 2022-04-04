@@ -1,4 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jleroux <marvin@42lausanne.ch>             +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/04/04 14:48:52 by jleroux           #+#    #+#             */
+/*   Updated: 2022/04/04 14:50:53 by jleroux          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "get_next_line_bonus.h"
+
 ssize_t	read_file(int fd, char **buff_read, char **line);
 char	*get_line(char **buff_read, char **line);
 
@@ -52,9 +65,9 @@ char	*get_line(char **buff_read, char **line)
 
 	i = 0;
 	new_buff = NULL;
-	while ((*(*buff_read + i) != '\n') && (*(*buff_read + i) != '\0'))
+	while ((buff_read[0][i] != '\n') && (buff_read[0][i] != '\0'))
 		i++;
-	if (*(*buff_read + i) == '\n')
+	if (buff_read[0][i] == '\n')
 	{
 		i++;
 		*line = ft_substr(*buff_read, 0, i);
